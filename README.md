@@ -17,11 +17,20 @@ I also work as an **Embodied AI Research Intern at Stellarnex Robotics（星际�
 
 ## News
 
+- **October 2026** — Our new paper **[Directed Temporal Representations for Offline Visual Control](https://arxiv.org/abs/2610.08960)** is now on arXiv! DTRC connects world-model representations to goal-directed control across ten visual tasks. [Project page](https://chenyang-yuan.github.io/dtrc-project/) · [Code](https://github.com/Chenyang-Yuan/DTRC)
 - **September 2026** — 🎉 Our paper **[Fisher Decorator: Refining Flow Policy via a Local Transport Map](https://arxiv.org/abs/2604.17919)** was accepted at **NeurIPS 2026**!
 - **September 2026** — ZIP-your-Research's final public snapshot, **v1.8.2**, preserves our work on autoresearch. The project reached **82 stars** at archival; following its acquisition, subsequent development is closed source.
 - **June 2026** — I joined **Stellarnex Robotics** as an Embodied AI Research Intern, leading the VLA and world-model direction.
 
 ## Research
+
+**[Directed Temporal Representations for Offline Visual Control](https://arxiv.org/abs/2610.08960)**  
+arXiv, October 2026  
+Chenyang Yuan, **Haoyu Wang**, Zhuo Sun, Xiaoyuan Cheng.
+
+This work turns frozen world-model features into a directed temporal distance: how many steps it takes to reach a visual goal, accounting for the fact that going forward and going back can have different costs. DTRC uses progress toward the goal to train a flow policy that acts without test-time trajectory search. Across ten visual control tasks, it achieves best or tied-best performance among the evaluated baselines on PushT, TwoRoom, and Reacher, with further evaluation on visual OGBench navigation and manipulation tasks.
+
+[Paper](https://arxiv.org/abs/2610.08960) · [Code](https://github.com/Chenyang-Yuan/DTRC) · [Project page](https://chenyang-yuan.github.io/dtrc-project/)
 
 **[Fisher Decorator: Refining Flow Policy via a Local Transport Map](https://arxiv.org/abs/2604.17919)**  
 NeurIPS 2026 · **Co-first author**  
@@ -68,3 +77,4 @@ This work compares five motor configurations across operating conditions, provid
 | **[Easy-Plot](https://github.com/ARC0127/Easy-Plot)** | A simpler way to work with language models on plotting. [![GitHub stars](https://img.shields.io/github/stars/ARC0127/Easy-Plot?style=flat&label=Stars)](https://github.com/ARC0127/Easy-Plot/stargazers) |
 
 More research, project details, and updates → **[arc0127.github.io](https://arc0127.github.io/)**
+
