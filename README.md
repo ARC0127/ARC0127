@@ -17,7 +17,7 @@ I also work as an **Embodied AI Research Intern at Stellarnex Robotics（星际�
 
 ## News
 
-- **October 2026** — Our new paper **[Directed Temporal Representations for Offline Visual Control](https://arxiv.org/abs/2610.08960)** is now on arXiv! DTRC connects world-model representations to goal-directed control across ten visual tasks. [Project page](https://chenyang-yuan.github.io/dtrc-project/) · [Code](https://github.com/Chenyang-Yuan/DTRC)
+- **October 2026** — Our new paper **[Directed Temporal Representations for Offline Visual Control](https://arxiv.org/abs/2610.08960)** is now on arXiv! DTRC learns directed temporal reaching costs from offline visual trajectories and uses goal-relative progress to train a policy that acts without test-time trajectory search. [Project page](https://chenyang-yuan.github.io/dtrc-project/) · [Code](https://github.com/Chenyang-Yuan/DTRC)
 - **September 2026** — 🎉 Our paper **[Fisher Decorator: Refining Flow Policy via a Local Transport Map](https://arxiv.org/abs/2604.17919)** was accepted at **NeurIPS 2026**!
 - **September 2026** — ZIP-your-Research's final public snapshot, **v1.8.2**, preserves our work on autoresearch. The project reached **82 stars** at archival; following its acquisition, subsequent development is closed source.
 - **June 2026** — I joined **Stellarnex Robotics** as an Embodied AI Research Intern, leading the VLA and world-model direction.
@@ -28,7 +28,9 @@ I also work as an **Embodied AI Research Intern at Stellarnex Robotics（星际�
 arXiv, October 2026  
 Chenyang Yuan, **Haoyu Wang**, Zhuo Sun, Xiaoyuan Cheng.
 
-This work turns frozen world-model features into a directed temporal distance: how many steps it takes to reach a visual goal, accounting for the fact that going forward and going back can have different costs. DTRC uses progress toward the goal to train a flow policy that acts without test-time trajectory search. Across ten visual control tasks, it achieves best or tied-best performance among the evaluated baselines on PushT, TwoRoom, and Reacher, with further evaluation on visual OGBench navigation and manipulation tasks.
+This work learns a control representation that captures how long reaching a visual goal takes. Starting from frozen LeWorldModel (LeWM) features, DTRC learns a directed temporal quasimetric from offline trajectories, allowing forward and reverse reaching costs to differ. Short-range trajectory offsets calibrate the distance, bootstrapped targets extend it to longer horizons, and action-conditioned consistency ties the representation to local transition dynamics.
+
+A reduction in this distance measures progress toward the goal and supplies a temporal critic for training a goal-conditioned flow policy. Model-assisted refinement is constrained by behavior support and dynamics agreement. Across ten visual tasks spanning navigation, reaching, and manipulation, DTRC performs strongly against planning and direct-policy baselines. Temporal supervision improves the same flow-policy architecture on all four LeWM tasks—PushT, TwoRoom, Reacher, and Cube—while execution requires no iterative trajectory search.
 
 [Paper](https://arxiv.org/abs/2610.08960) · [Code](https://github.com/Chenyang-Yuan/DTRC) · [Project page](https://chenyang-yuan.github.io/dtrc-project/)
 
